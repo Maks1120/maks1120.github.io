@@ -11,7 +11,7 @@ if (operation === '+') {
     console.log(num1 / num2);
 } else if (operation === '*') {
     console.log(num1 * num2);
-} else ((operation === ' '), (num1, num2 === ' ')); {
+} else {
     alert('Operation error!');
 } 
 
