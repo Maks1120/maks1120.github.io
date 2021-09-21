@@ -9,9 +9,10 @@ if (login === 'admin' && password === 'test') {
 } else if (login === 'admin' && password !== 'test') {
         while (password !== 'test') {
         password = prompt('Неверный пароль, попробуйте еще раз!')
-        alert('Добро пожаловать!')
         if (password === null) break
-    }  
+    } if (password === 'test') {
+        alert('Добро пожаловать!')
+    } 
 } else {
     alert('Неверный логин и пароль!')
 }
