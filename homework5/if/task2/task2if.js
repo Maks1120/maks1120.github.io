@@ -1,11 +1,12 @@
 const age = prompt('Подтвердите свой возраст!', ' ');
+let ageGreeting;
 
 if (age > 30) {
-    alert('Здравствуйте.');
+    ageGreeting = 'Здравствуйте.';
 } else if (age < 18) {
-    alert('Отказано в доступе!');
+    ageGreeting = 'Отказано в доступе!';
 } else if (age >= 18) {
-    alert('Привет друг!'); 
+    ageGreeting = 'Привет друг!'; 
 }
 
- 
+alert(ageGreeting)

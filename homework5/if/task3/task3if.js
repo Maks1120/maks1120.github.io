@@ -1,22 +1,24 @@
 const drink = prompt('Чай или кофе?')
 const tea = ('чай')
 const coffee = ('кофе')
-
+let clientChoice
 
 if (drink === tea) {
     const teaWithSugar = prompt('С сахаром?', ' '); {
     } if (teaWithSugar === 'да') {
-        alert('Ваш чай с сахаром!');
+        clientChoice = 'Ваш чай с сахаром!';
     } else {
-        alert('Ваш чай без сахара');
+        clientChoice = 'Ваш чай без сахара';
     }
 } else if (drink === coffee) {
     const coffeeWithSugar = prompt('С сахаром?', ' '); {
     } if (coffeeWithSugar === 'да') {
-        alert('Ваш кофе с сахаром!');
+        clientChoice = 'Ваш кофе с сахаром!';
     } else {
         alert('Ваш кофе без сахара');
     }
 } else {
     alert('Перезагрузиет страницу, и выберите напиток еще раз!')
 }
+
+alert(clientChoice)
