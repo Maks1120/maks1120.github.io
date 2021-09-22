@@ -14,6 +14,4 @@ if (serialFibNumber === '1') {
     alert('1')
 } else if (serialFibNumber === '2') {
     alert('1')
-} else if (serialFibNumber === null) {
-    alert('error')
 }
