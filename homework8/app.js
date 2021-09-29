@@ -27,25 +27,22 @@ function createUser(firstName = null, lastName = null, age = null) {
 
 
 
-const numberSelection = +prompt('Введите число Больше или меньше ста!');
-function funcResult() {
-    
-    if (numberSelection < 100) {
-        upTo100()
-    } else if (numberSelection >= 100) {
-        after100()
-    } else {
-        alert('Error');
-    }
-}
-funcResult();
-
-
 function upTo100() {
     alert('До ста!');
 }
-
+    
 function after100() {
     alert('После ста!');
 }
 
+const userNumber = prompt('Введите число больше или меньше 100')
+function funcResult(resultUpTo100, resultAfter100, userNumber) {
+ 
+    if (userNumber < 100) {
+        resultUpTo100();
+    } else if (userNumber > 100) {
+        resultAfter100();
+    }
+}
+
+funcResult(upTo100, after100, userNumber);
