@@ -1,30 +1,51 @@
-const number = +prompt('Введите число больше или меньше ста!')
+let a = +prompt('Введите число');
+let b = +prompt('Введите степень');
+
+function pow(a,b) {
+    let degree = a; 
+
+    for (let d = 1; d < b; d++) {
+        degree *= a;
+        }
+        return degree;
+}
+    alert(pow(a,b));
+
+
+
+
+function createUser(firstName = null, lastName = null, age = null) {
+    const user = {
+        firstName,
+        lastName,
+        age
+    }
+    return user;
+}
+
+    console.log(createUser('Pupkin', 'Vasya'));
+
+
+
+const numberSelection = +prompt('Введите число Больше или меньше ста!');
 function funcResult() {
     
-    if (number < 100) {
-        function pow() {
-            let degree = a; 
-        
-            for (let d = 1; d < b; d++) {
-                degree *= a;
-                }
-                return degree;
-            }
-            let a = +prompt('Введите число')
-            let b = +prompt('Введите степень')
-            alert(pow(a,b));
-            
-    } else if (number >= 100) {
-        function userData() {
-            let firstName = prompt('Введите имя');
-            let lastName = prompt('Введите фамилию');
-            let age = prompt('Введите возраст');
-
-            alert (`${firstName}, ${lastName}, ${age}`);
-        }
-        userData();
+    if (numberSelection < 100) {
+        upTo100()
+    } else if (numberSelection >= 100) {
+        after100()
     } else {
-        alert('Error')
+        alert('Error');
     }
 }
 funcResult();
+
+
+function upTo100() {
+    alert('До ста!');
+}
+
+function after100() {
+    alert('После ста!');
+}
+
