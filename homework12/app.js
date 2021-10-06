@@ -23,9 +23,15 @@ function User(firstName, lastName, age) {
     this.age = age;
 
     this.greet = function() {
-        console.log(`Hello, ${firstName}`);
+        console.log(`Hello, ${this.firstName}`);
     }
 }
-let userGreet = new User('Vanya');
+
+const userGreet = new User('Ivan', 'Ivanov', 33);
+
+userGreet.greet();
+
+userGreet.firstName = 'Vasya';
+
 userGreet.greet();
 
