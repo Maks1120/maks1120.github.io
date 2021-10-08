@@ -45,8 +45,8 @@ onlyNumbers();
 //         for (key in user) {
 //             if (!isNaN(+key)) {
 //                 result.push(user[key]);
-//             }
-//         }
+//             };
+//         };
 //     console.log(result);
 // }
 // onlyNumbers();
