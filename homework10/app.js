@@ -1,45 +1,60 @@
 
-
-function firstObjectFunc() {
-    const object1 = {}
-    // console.log('toString' in object1); // вариант 1
-    console.log(object1.value === undefined) // вариант 2
-}
-firstObjectFunc();
-
-
-
-
-function secondObjectFunc() {
-    const object2 = {
-        firstName: false
+'use strict'
+function emptyOrNot(object) {
+    for (let key in object) {
+        return console.log(false);
     }
-
-    for (key in object2) {
-        console.log(object2[key]);
-    }
+    return console.log(true);
 }
-secondObjectFunc();
+
+emptyOrNot();
 
 
 
-
-
+  
+// 2 задача, ВАРИАНТ 1
 function onlyNumbers() {
-    let user = {
-    '0': 'zero', 
-    '42': 'answer', 
-    'greeting': 'Hello',
-    '3.14': 'PI', 
-    '55': 'age'
-  }
-
-    let result = [];
-        for (key in user) {
-            if (!isNaN(+key)) {
-            result.push(user[key]);
-        }
-    }
-    console.log(result);
-}
+    let object = {
+        '0': 'zero', 
+        '42': 'answer', 
+        'greeting': 'Hello',
+        '3.14': 'PI',
+        '55': 'age'
+    };
+    for (let key in object) {
+        if (+key || +key === 0) {
+        console.log(object[key]);
+        };
+    };
+};
 onlyNumbers();
+
+
+
+// 2 задача, ВАРИАНТ 2
+// function onlyNumbers() {
+//     let user = {
+//         '0': 'zero', 
+//         '42': 'answer', 
+//         'greeting': 'Hello',
+//         '3.14': 'PI', 
+//         '55': 'age'
+//     };
+
+//     let result = [];
+//         for (key in user) {
+//             if (!isNaN(+key)) {
+//                 result.push(user[key]);
+//             }
+//         }
+//     console.log(result);
+// }
+// onlyNumbers();
+
+
+
+
+
+
+
+
