@@ -22,8 +22,9 @@ console.log(capitalize('some text for capitalize'));
 
 
 function checkSubstring(string, substring) {
-    string = 'Hello my friend';
-    substring = 'my';
-    return string.includes(substring);
+    return string
+    .toLowerCase()
+    .includes(substring.toLowerCase())
+    
 }
-console.log(checkSubstring());
+console.log(checkSubstring('Hello my friend', 'My'));
