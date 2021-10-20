@@ -15,16 +15,11 @@ console.log(capitalize('some text for capitalize'));
 
 
 
-
-
 // Напишите функцию checkSubstring(string, substring), которая проверяет наличие подстроки substring в строке string. Проверка должна быть нечувствительна к регистру.
-
-
 
 function checkSubstring(string, substring) {
     return string
     .toLowerCase()
-    .includes(substring.toLowerCase())
-    
+    .includes(substring.toLowerCase());
 }
 console.log(checkSubstring('Hello my friend', 'My'));
