@@ -21,8 +21,8 @@ console.log(allLiSecond);
 
 
 // 3 
-const liByClassThird = document.querySelector('.third');
-console.log(liByClassThird);
+const liThirdInOl = document.querySelector('ol .third');
+console.log(liThirdInOl);
 
 
 // 4
@@ -63,8 +63,12 @@ console.log(liCollections);
 
 // 8
 const liOfOl = document.querySelector('ol');
-liOfOl.style.backgroundColor = 'green';
-console.log(liOfOl);
+const liElemsGreen = liOfOl.querySelectorAll('li');
+for (let green of liElemsGreen) {
+    green.style.backgroundColor = 'green';
+}
+console.log(liElemsGreen);
+
 
 // 9
 const delFooter = document.querySelector('.footer');
