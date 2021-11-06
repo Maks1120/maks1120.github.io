@@ -8,75 +8,37 @@
 // Бонус №2:
 // При вызове с последующими индексами должна осуществляться многоуровневая сортировка: при клике на другую колонку - сортировка не сбрасывается, а добавляется новым уровнем. Механика, добавленная в бонусе №1, должна оставаться рабочей.
 
-
-// const columnName = table.rows[0].cells[0].innerHTML;
-// const columnSurname = table.rows[0].cells[1].innerHTML;
-// const columnAge = table.rows[0].cells[2].innerHTML;
-
-// 1. Получить таблицу
-// 2. Получить колонки таблицы (th)
-// 3. Получить ячейки таблицы ()tr
-// 4. Создать функцию sortTable которая принимает (columnIndex)
-    // 4.1. Получить индекс колонок таблицы (th)
-    // 4.2. Получить 
-
-
+"use strict";
 
 const table = document.querySelector('table');
-console.log(table);
 
-const headings = [...table.querySelectorAll('th')];
-console.log(headings)
+const rows = [...table.querySelectorAll('tbody tr')];
 
-const rows = [...table.querySelectorAll('tr:not(:first-child)')]
-console.log(rows)
+const array = rows.map((elem) => {
+    return [...elem.querySelectorAll('td')].map((td) => {
+        return (!isNaN(td.textContent)) ? +td.textContent : td.textContent;
+    });
+});
+
+const tableHTML = array.map((row) => {
+    const content = row.map((elemRow) => {
+        return `<td>${elemRow}</td>`;
+    }).join(' ');
+    return `<tr>${content}</tr>`;
+}).join(' ');
+
+const tableBody = table.querySelector('tbody');
+
+tableBody.innerHTML = tableHTML;
 
 function sortTable(columnIndex) {
-    const index = headings.findIndex((elem) => {
-        return elem.textContent === columnIndex;
-    });
-
-    const sorting = rows
-        .map((row) => row.children[index].innerHTML)
-        .sort((a,b) => {
-            return a < b ? -1 : 1;
-        })
-    return sorting;
+    const sortedArray = array.sort((a, b) => a[columnIndex] < b[columnIndex] ? -1 : 1);
+    const sortedTableHTML = sortedArray.map((row) => {
+        const content = row.map((elemRow) => {
+            return `<td>${elemRow}</td>`;
+        }).join(' ');
+        return `<tr>${content}</tr>`;
+    }).join(' ');
+    tableBody.innerHTML = sortedTableHTML;
 }
-console.log(sortTable('Surname'));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // console.log(arr)
-
-// arr = arr.slice(1);
-// arr.sort((a, b) => {
-    // let str = a.cells[0].textContent;
-    // let str2 = b.cells[0].textContent;
-    // return str.localeCompare(str2);
-//     console.log(str)
-// });
-
-// table.tBodies[0].append(...arr);

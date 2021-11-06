@@ -18,13 +18,28 @@
   th {
     background: #01a6f3;
   }
+
+  th.sorted[data-order="1"]::after,
+  th.sorted[data-order="-1"]::after {
+    right: 10px;
+    position: absolute;
+  }
+
+  th.sorted[data-order="-1"]::after {
+	  content: "▼"
+  }
+
+  th.sorted[data-order="1"]::after {
+	  content: "▲"
+  }
+
   tr {
     background: #80ca62;
     text-align: center;
   }
 </style>
 <body>
-    <table id="table">
+    <table>
       <tbody>
         <tr>
           <th>Name</th>
@@ -45,9 +60,15 @@
         </tr>
 
         <tr>
-          <td>Stepan</td>
+          <td>Viktor</td>
           <td>Stepanov</td>
           <td>40</td>
+        </tr>
+
+        <tr>
+          <td>Maksim</td>
+          <td>Sklyar</td>
+          <td>27</td>
         </tr>
       </tbody>
     </table>
