@@ -26,8 +26,6 @@ function seriesFibonacci(number) {
 console.log(seriesFibonacci(3));
 
 
-
-
 function factorial(facNumber) {
     if (facNumber != 1) {
         return facNumber * factorial(facNumber - 1);
@@ -39,18 +37,11 @@ function factorial(facNumber) {
 console.log(factorial(5));
 
 
-
-function factorialize(num) {
-    let result = num;
-        if (num === 0 || num === 1) {
-            return 1;
-        };
-
-        while (num > 1) {
-            num--;
-            result = num * result;
-        };
-    return result;
-};
+function FirstFactorial(num) {
+    for (let i = num-1; i >= 1; i--) {
+        num = num * i;
+    }
+    return num;     
+}
   
-console.log(factorialize(5));
+console.log(FirstFactorial(5));
