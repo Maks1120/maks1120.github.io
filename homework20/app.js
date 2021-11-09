@@ -37,11 +37,11 @@ function factorial(facNumber) {
 console.log(factorial(5));
 
 
-function FirstFactorial(num) {
+function factorialize(num) {
     for (let i = num-1; i >= 1; i--) {
         num = num * i;
     }
     return num;     
 }
   
-console.log(FirstFactorial(5));
+console.log(factorialize(5));
