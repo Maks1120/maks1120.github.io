@@ -20,27 +20,25 @@ console.log(arr.filter(createRangeFilter(2,4)));
 // 2
 
 
-// const arrObj = [
-//         {name: 'Vasya', surname: 'Ivanov'},
-//         {name: 'Vanya', surname: 'Ivanov'},
-//         {name: 'Albert', surname: 'Vasyliev'}
-//     ];
 
-// function createKeyBy(propName) {
-    
-//     return function keyBy(arrObj) {
-//         const newArr = arrObj.reduce((newArr, elem) => {
-//             if (!newArr[elem[propName]]) {
-//                     return newArr[elem[propName]] = [];
-//                 }
-//                 newArr[elem[propName]].push(elem);
-//                     return newArr;
-//             }, {});
-//         return newArr;
-//     }
-// }
+function createKeyBy(propName) {
+    return function keyBy(arr) {
+        return arr.reduce((sortByKey, elem) => {
+            if (!sortByKey[elem[propName]]) {
+                sortByKey[elem[propName]] = [];
+            }
+                sortByKey[elem[propName]].push(elem);
+                return sortByKey;
+        }, {});
+    };
+}
 
-// console.log(arrObj.keyBy(createKeyBy('name')));
+console.log(createKeyBy('name')([
+    {name: 'Vasya', surname: 'Ivanov'},
+    {name: 'Vanya', surname: 'Ivanov'},
+    {name: 'Albert', surname: 'Vasyliev'},
+    {name: 'Maks', surname: 'Sklyar'}
+]))
 
 
 
