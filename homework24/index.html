@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер</title>
+    <style>
+        body {
+            background: #86898f;
+        }
+
+        .container {
+            margin: auto;
+            width: 50%;
+            height: 160px;
+            background: cadetblue;
+            border-radius: 10px;
+        }
+
+        .input-conteiner {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+
+
+        input {
+            width: 30%;
+            height: 25px;
+            border-radius: 5px;
+            background: #f1f1f1;
+            margin-right: 10px;
+        }
+
+        #timer {
+            margin: auto;
+            background: #f1f1f1;
+            width: 65%;
+            height: 50px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 25%;
+            height: 32px;
+            border: 2px solid #86898f;
+            border-radius: 5px;
+        }
+
+        #show-greeting {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-conteiner">
+            <input type="number" name="minutes" placeholder="Введите количество минут" min="1" id="minutes">
+            <input type="number" name="seconds" placeholder="Введите количество секунд" max="1440" id="seconds">
+            <button id="button">Запустить таймер</button>
+        </div>
+        
+        <div id="show-greeting">
+
+        </div>
+
+        
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
