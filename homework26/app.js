@@ -15,7 +15,10 @@ class Vegetable {
     }
 }
 
-// // 2
+const cabbage = new Vegetable("cabbage");
+
+
+// 2
 class Animal {
     constructor(legs) {
         this.legs = legs;
@@ -25,15 +28,17 @@ class Animal {
 
     eat(food) {
         this.stomach.push(food);
-        return `ест ${this.legs}`
     }
 }
+
+const fox = new Animal(4);
+fox.eat('chicken');
 
 
 // 3 
 class Rabbit extends Animal {
-    constructor(breed) {
-        super(breed);
+    constructor(legs, breed) {
+        super(legs, breed);
         this.breed = breed;
     }
 
@@ -42,18 +47,18 @@ class Rabbit extends Animal {
     }
 
     eat(food) {
-		if (!(food instanceof Vegetable)) {
-			throw new Error("Кролики едят только овощи!")
-		}
+		if (!(food instanceof Vegetable)) throw new Error("Кролики едят только овощи!");
 		super.eat(food);
 	}
 }
 
+const rabbit = new Rabbit(4, 'Кролик');
+
 
 // 4
 class Snake extends Animal {
-    constructor(isPoisonous) {
-        super(isPoisonous);
+    constructor(legs, isPoisonous) {
+        super(legs, isPoisonous);
         this.isPoisonous = isPoisonous;
     }
 
@@ -62,18 +67,19 @@ class Snake extends Animal {
     }
     
     eat(food) {
-        if (!(food instanceof Rabbit)) {
-            throw new Error('Змеи не едят овощи')
-        }
-        super.eat(food);
+        if (!(food instanceof Rabbit)) throw new Error('Змеи не едят овощи');
+		super.eat(food);
+        
     }
 }
+
+const snake = new Snake(0, true);
 
 
 // 5
 class Human extends Animal {
-    constructor (firstName, lastName) {
-        super(firstName, lastName);
+    constructor (legs, firstName, lastName) {
+        super(legs, firstName, lastName);
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -87,9 +93,56 @@ class Human extends Animal {
     }
 
     eat(food) {
-		if (food instanceof Human) {
-			throw new Error('Люди не едят других людей!');
-		}
+		if (food instanceof Human) throw new Error('Люди не едят других людей!');
 		super.eat(food);
 	}
 }
+
+const human = new Human(2, 'Ivan', 'Petrov');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Animal {
+//     constructor(options) {
+//         this.name = options.name;
+//         this.color = options.color;
+//     }
+
+//     voice() {
+//         console.log('Base voice from:', this.name);
+//     }
+// }
+
+// const dog = new Animal ({name: 'Rex', color: 'white'});
+
+// class Cat extends Animal {
+//     constructor(options) {
+//         super(options);
+
+//         this.hasTail = options.hasTail;
+//         this.type = 'cat';
+//     }
+
+//     voice() {
+//         super.voice()
+//         console.log(this.name + ' says miay')
+//     }
+// }
+
+// const cat = new Cat({name: 'Murzik', color: '#000', hasTail: true})
