@@ -5,17 +5,16 @@
 
 // 1.
 String.prototype.reverse = function () {
-    return this.split(",").reverse().join(" ");
+    return this.split("").reverse().join("");
 }
 console.log('1,2,3,4,5'.reverse());
 
 // 2
 Array.prototype.notMutableSorting = Array.prototype.sort;
 
-Array.prototype.sort = function () {
-    return [...this].notMutableSorting();
+Array.prototype.sort = function (func) {
+    return [...this].notMutable(func);
 }
-console.log(notMutableSorting(1,2,3,4,5));
 
 
 // 3
