@@ -26,13 +26,18 @@ xhr.addEventListener ('load', () => {
     } else {
         console.log('hello world' + ''.repeat(5));
     }
+
+    // 2
+    const xhr1 = new XMLHttpRequest();
+
+    xhr1.open('POST', '/objects');
+
+    xhr1.send({firstName: 'Vasya', lastName: 'Ivanov'});
+
+    xhr1.addEventListener ('load', () => {
+            console.error(xhr1.status);
+            console.log(xhr1.response);
+    });
 });
 
-
-// 2
-const xhr1 = new XMLHttpRequest();
-
-xhr1.open('POST', '/objects');
-
-xhr.open('GET', '/objects');
 
