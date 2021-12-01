@@ -1,0 +1,127 @@
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    /* Кнопка, используемая для открытия контактной формы-фиксируется в нижней части страницы */
+    .open-button {
+      background-color: #131E6A;
+      color: white;
+      padding: 0%;
+      border: 1px solid #FF1633; 
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 28px 1px rgba(255, 22, 51, 1);
+    }
+    
+    /* Всплывающая форма-скрыта по умолчанию */
+    .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+    }
+    
+    /* Добавление стилей в контейнер форм */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    /* Поля ввода полной ширины */
+    .form-container input[type=text], 
+    .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    /* Когда входы получают фокус, сделайте что-нибудь */
+    .form-container input[type=text]:focus,  
+    .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Установите стиль для кнопки отправить/кнопка */
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Добавьте красный цвет фона к кнопке отмена */
+    .form-container .cancel {
+      background-color: red;
+    }
+    
+    /* Добавьте некоторые эффекты наведения на кнопки */
+    .form-container.btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h1>Всплывающая форма</h1>
+    
+    <p>Нажмите на кнопку внизу этой страницы, чтобы открыть форму входа.</p>
+    <p>Обратите внимание, что кнопка и форма фиксированы - они всегда будут располагаться в нижней части окна браузера.</p>
+    
+    <button class="open-button" onclick="openForm()">Открыть форму</button>
+    
+    <!-- <div class="form-popup" id="myForm">
+      <form action="../action_page.php" class="form-container">
+        <h1>Вход</h1>
+    
+        <label for="email"><b>Почта</b></label>
+        <input type="text" placeholder="Ваша почта" name="email" required>
+    
+        <label for="psw"><b>Пароль</b></label>
+        <input type="password" placeholder="Ваш пароль" name="psw" required>
+    
+        <button type="submit" class="btn">Вход</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+      </form>
+    </div> -->
+    
+    <div class="form-popup" id="myForm">
+     <form action="/backend/contact_form.php" method="post" id="contactForm" class="form-container">
+            Name 
+           <label><input type="text" name="contact_name" placeholder="ПІБ" required="required"></label>
+            Email 
+           <label><input type="email" name="contact_email" placeholder="Email" required="required"></label>
+            Phone 
+           <label><input type="number" name="contact_phone" placeholder="Контактний телефон" required="required"></label>
+            Message 
+           <label><textarea name="contact_message" placeholder="Текст" required></textarea></label>
+            Submit 
+           <button type="submit">Відправити<i class="fa fa-spin fa-spinner"></i></button>
+           <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+       </form>
+    </div>
+
+    <script async src=""></script>
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>

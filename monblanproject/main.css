@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+._container {
+    max-width: 1488px;
+    margin: 0 auto;
+}
+
+section {
+    width: 1488px;
+    height: 1195px;
+    background: #E5E5E5;
+}
+
+header {
+    position: absolute;
+    width: 1488px;
+    height: 172px;
+    top: 0px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.67);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12), inset 0px 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+
+.logo img {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.logo .three {
+    margin: 6px 379px;
+}
+
+.logo .two {
+    margin: 40.5px 386.5px 0px;
+}
+
+.logo .one {
+    margin: 35.5px 379.5px;
+}
+
+
+.logo .monblan {
+    position: absolute;
+    width: 195px;
+    height: 29px;
+    left: 579px;
+    top: 33px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.01em;
+
+    color: #000000;
+}
+
+.start {
+    position: absolute;
+    width: 135px;
+    height: 28px;
+    left: 790px;
+    top: 35px;
+
+    border: 1px solid #3D8EDA;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.start a {
+    position: absolute;
+    padding: 5px 12px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: -0.03em;
+
+    color: #3D8EDA;
+}
+.posts-followers-following span {
+    font-weight: bold;
+    padding-right: 3px;
+}
+
+.posts-followers-following 
+a {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+.posts {
+    position: absolute;
+    width: 63px;
+    height: 16px;
+    left: 583px;
+    top: 78px;
+}
+
+.followers {
+    position: absolute;
+    width: 105px;
+    height: 16px;
+    left: 674px;
+    top: 78px;
+}
+
+.following {
+    position: absolute;
+    width: 85px;
+    height: 16px;
+    left: 796px;
+    top: 78px;
+}
+
+.dates {
+    position: absolute;
+    width: 33px;
+    height: 19px;
+    left: 581px;
+    top: 117px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+input {
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.input-date-start {
+    position: absolute;
+    width: 162px;
+    height: 28px;
+    left: 625px;
+    top: 113px;
+}
+
+.input-date-end {
+    position: absolute;
+    width: 162px;
+    height: 28px;
+    left: 809px;
+    top: 113px;
+}
+
+.table {
+    display: flex;
+}
+
+.first-table {
+    margin-left: 434px;
+    margin-top: 190px;
+}
+
+.first-table td {
+    width: 6px;
+    height: 6px;
+    background-color: #3D8EDA;
+}
+
+.two-table {
+    margin-left: 21px;
+    margin-top: 190px;
+}
+
+.two-table .rows {
+    width: 6px;
+    height: 6px;
+    background-color: #3D8EDA;
+}
+
+.two-table .row {
+    width: 22px;
+    height: 6px;
+    background-color: #3D8EDA;
+}
+
+.tooday {
+    display: flex;
+    position: absolute;
+    width: 836px;
+    height: 86px;
+    left: 300px;
+    background-color: #ffff;
+}
+
+
+
+.tooday-1 {
+    top: 235px;
+}
+
+
+.tooday-2 {
+    top: 329px;
+}
+
+
+.tooday-3 {
+    top: 423px;
+}
+
+.tooday-4 {
+    top: 517px;
+}
+
+.tooday-5 {
+    top: 611px;
+}
+
+.tooday-6 {
+    top: 705px;
+}
+
+.tooday-7 {
+    top: 799px;
+}
+
+.tooday-8 {
+    top: 893px;
+}
+
+.tooday-9 {
+    top: 987px;
+}
+
+
+.load-more {
+    position: absolute;
+    width: 111px;
+    height: 28px;
+    left: 661px;
+    top: 1106px;
+
+    border: 1px solid #929292;
+    box-sizing: border-box;
+    border-radius: 14px;
+}

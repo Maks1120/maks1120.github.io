@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixedmenu</title>
+    <link href="vivify.min.css" rel="stylesheet" type="text/css"/>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        header {
+            background: #ffe;
+            height: 400px;
+        }
+        body {
+            height: 1000px;
+            background: whitesmoke;
+        }
+
+        a {
+            color: white;
+        }
+
+        #form-exit-icon {
+            position: fixed;
+            left: 10px; 
+            top: 80%; 
+            border: 1px solid #FF1633; 
+            width: 73px;
+            height: 73px;
+            border-radius: 50%;
+            opacity: 0.75;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 28px 1px rgba(255, 22, 51, 1);
+            transition: 0.5s;
+        }
+
+        #question {
+            border: 2px solid #131E6A;
+            opacity: 100;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #FF1633;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .is-questions {
+            font-size: 12px;
+            text-align: center;
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+
+
+        #container {
+            background: chocolate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <a href="">
+        <div id="form-exit-icon" class="vivify pulsate">
+            <div id="question">
+                <img src="./message.png" alt="message" class="vivify pulsate infinite" id="elem">
+            </div>
+            <div id="container"></div>
+        </div>
+    </a>
+
+    
+        <!-- <form action="/backend/contact_form.php" method="post" id="contactForm" class="site-contact-form">
+            Name 
+           <label><input type="text" name="contact_name" placeholder="ПІБ" required="required"></label>
+            Email 
+           <label><input type="email" name="contact_email" placeholder="Email" required="required"></label>
+            Phone 
+           <label><input type="number" name="contact_phone" placeholder="Контактний телефон" required="required"></label>
+            Message 
+           <label><textarea name="contact_message" placeholder="Текст" required></textarea></label>
+            Submit 
+           <button type="submit">Відправити<i class="fa fa-spin fa-spinner"></i></button>
+       </form> -->
+    
+<script>
+    const displayForm = document.getElementById('form-exit-icon')
+    const question = document.getElementById('question');
+    const element = document.getElementById('elem');
+    const formContainer = document.getElementById('container');
+
+    displayForm.addEventListener('mouseover', () => {
+        question.innerHTML = '<img src="./message.png" alt="message" id="envelope">';
+    });
+
+    displayForm.addEventListener('mouseout', () => {
+        question.innerHTML = '<img src="./message.png" alt="message" id="envelope" class="vivify pulsate infinite">';
+    });
+
+    question.addEventListener('click', () => {
+        formContainer.innerHTML = `<div>111111111111</div>`
+    });
+
+</script>
+</body>
+</html>

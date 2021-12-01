@@ -1,17 +1,24 @@
 
+// 1. Создайте функцию, которая будет возвращать true для пустого объекта ({}) и false для любого, в котором есть хотя бы одной свойство.
+
+
+
+
+
 'use strict'
 function emptyOrNot(object) {
     for (let key in object) {
-        return console.log(false);
+        return false;
     }
-    return console.log(true);
+    return true;
 }
 
-emptyOrNot();
+console.log(emptyOrNot());
 
 
 
-  
+
+
 // 2 задача, ВАРИАНТ 1
 function onlyNumbers() {
     let object = {
@@ -21,6 +28,7 @@ function onlyNumbers() {
         '3.14': 'PI',
         '55': 'age'
     };
+
     for (let key in object) {
         if (+key || +key === 0) {
         console.log(object[key]);

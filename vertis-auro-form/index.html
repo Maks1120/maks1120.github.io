@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VertisPozoff</title>
+</head>
+<body>
+    <style>
+        html, body, section {
+            block-size: 100%;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+        }
+
+        section {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section:nth-of-type(even) {
+            color: white;
+            background: black;
+        }
+
+        section:nth-of-type(odd) {
+            color: black;
+            background: white;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            font-size: 4rem;
+        }
+    </style>
+
+    <section>
+        <h1>slide 1</h1>
+    </section>
+    
+    <section>
+        <h1>slide 2</h1>
+    </section>
+    
+    <section>
+        <h1>slide 3</h1>
+    </section>
+    
+    <section>
+        <h1>slide 4</h1>
+    </section>
+    
+    <section>
+        <h1>slide 5</h1>
+    </section>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* MENU 1 */
+.menu1 ul {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+
+}
+
+
+.menu1 .title1 {
+    font-size: 24px;
+    cursor: pointer;
+    color: #131E6A;
+    background-color: #D0E9F8;
+    padding: 10px 30px 10px 20px;
+    transition: all .3s ease;
+}
+
+.menu1 .title1::before {
+    content: '▶ ';
+    font-size: 80%;
+    color: #FF1633;
+    transition-duration: 0.2s;
+    transition-delay: 0.15s;
+}
+
+
+.menu1.open1 .title1::before {
+    content: '▼ ';
+}
+
+.menu1.open1 ul {
+    display: block;
+    color: #131E6A;
+}
+
+
+
+/* MENU 2 */
+.menu2 ul {
+    margin: 10px;
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+    .menu2 .title2 {
+    font-size: 24px;
+    cursor: pointer;
+    color: #131E6A;
+    background-color: #D0E9F8;
+    padding: 10px 30px 10px 20px;
+    transition: all .3s ease;
+}
+
+.menu2 .title2::before {
+    content: '▶ ';
+    font-size: 80%;
+    color: #FF1633;
+    transition-duration: 0.2s;
+    transition-delay: 0.15s;
+}
+
+.menu2.open2 .title2::before {
+    content: '▼ ';
+}
+
+.menu2.open2 ul {
+    display: block;
+}
+
+
+
+
+
+    /* MENU 3 */
+.menu3 ul {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+  
+.menu3 .title3 {
+    font-size: 24px;
+    cursor: pointer;
+    color: #131E6A;
+    background-color: #D0E9F8;
+    padding: 10px 30px 10px 20px;
+    transition: all .3s ease;
+}
+
+.menu3 .title3::before {
+    content: '▶ ';
+    font-size: 80%;
+    color: #FF1633;
+    transition-duration: 0.2s;
+    transition-delay: 0.15s;
+}
+
+.menu3.open3 .title3::before {
+    content: '▼ ';
+}
+
+.menu3.open3 ul {
+    display: block;
+}
+
+      

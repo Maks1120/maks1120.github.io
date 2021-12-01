@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <title>Таймер</title>
     <style>
+
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
         body {
             background: #86898f;
         }
@@ -16,6 +22,7 @@
             height: 160px;
             background: cadetblue;
             border-radius: 10px;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
         }
 
         .input-conteiner {
@@ -26,51 +33,62 @@
             padding-top: 10px;
         }
 
-
         input {
-            width: 30%;
-            height: 25px;
+            width: 15%;
+            height: 27px;
             border-radius: 5px;
-            background: #f1f1f1;
-            margin-right: 10px;
+            background: #f7f1da;
+            margin-right: 16px;
+            border: 3px solid #999c8b;
+            text-align: center;
         }
 
-        #timer {
+        #show-greeting {
             margin: auto;
             background: #f1f1f1;
             width: 65%;
             height: 50px;
+            border: 5px solid #86898f;
             border-radius: 10px;
             margin-bottom: 20px;
+            text-align: center;
+            font-size: 34px;
+            color: #86898f;
+            letter-spacing: 5px;
+            box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
         }
 
         button {
-            width: 25%;
+            width: 30%;
             height: 32px;
-            border: 2px solid #86898f;
+            background: #f7f1da;
+            border: 2px solid #999c8b;
             border-radius: 5px;
+            font-weight: bold;
         }
 
-        #show-greeting {
+
+        p {
+            margin: auto;
+            font-size: 34px;
+            letter-spacing: 5px;
+            font-family: 'Roboto', sans-serif;
+            color: #86898f;
             text-align: center;
         }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="input-conteiner">
-            <input type="number" name="minutes" placeholder="Введите количество минут" min="1" id="minutes">
-            <input type="number" name="seconds" placeholder="Введите количество секунд" max="1440" id="seconds">
+            <input type="text" name="minutes" placeholder="Введите минуты" min="1" id="minutes">
+            <input type="text" name="seconds" placeholder="Введите секунды" max="1440" id="seconds">
             <button id="button">Запустить таймер</button>
         </div>
         
-        <div id="show-greeting">
-
-        </div>
-
-        
+        <div id="show-greeting">--:--</div>
     </div>
-
 
     <script src="app.js"></script>
 </body>

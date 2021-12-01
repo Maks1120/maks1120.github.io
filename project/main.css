@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.list-of-fitness-products {
+    width: 1410px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.list-of-fitness-products__upper {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.list-of-fitness-products__lower {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    position: static;
+    width: 369px;
+    height: 33px;
+    left: 0px;
+    top: 0px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 110%;
+
+    color: #1A1A25;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 30px 0px;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 120%;
+    color: #1A1A25;
+    
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 10px;
+    padding: 30px 30px;
+}
+
+.long-box-1 h3 {
+    font-family: 'Inter', sans-serif;   
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 120%;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 10px;
+    padding: 33px 28.77px;
+}
+
+.long-box-1 {
+    background-image: url(./image/running-track.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 690px;
+    height: 280px;
+    background-color: #0D1012;
+    opacity: 90%;
+    border-radius: 6px;
+}
+
+.list-of-fitness-products__product-box {
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 280px;
+    background-color: #F0F1F7;
+    border-radius: 6px;
+}
+
+.list-of-fitness-products__product-box__2 {
+    background-image: url(./image/box2-trainers-apparatus.png);
+}
+
+.list-of-fitness-products__product-box__3 {
+    background-image: url(./image/box3-trainers-apparatus.png);
+}
+
+.list-of-fitness-products__product-box__4 {
+    background-image: url(./image/box4-functional-training.png);
+}
+
+.list-of-fitness-products__product-box__5 {
+    background-image: url(./image/box5-wellness.png);
+}
+
+.list-of-fitness-products__product-box__6 {
+    background-image: url(./image/box6-rehabilitation.png);
+}
+
+.list-of-fitness-products__product-box__7 {
+    background-image: url(./image/box7-dumbbells.png);
+}
