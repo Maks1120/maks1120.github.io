@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 960px;
+  height: 250px;
+  background-color: #00a2ff;
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  border: 2px solid #4f4fff;
+  border-radius: 5px;
+}
+.container label {
+  margin: 50px 20px 0 20px;
+  font-size: 22px;
+}
+.container label input {
+  margin-top: 20px;
+  width: 30%;
+  height: 10%;
+  border: 2px solid #4f4fff;
+  border-radius: 5px;
+}
+.container label p {
+  position: absolute;
+  left: 579px;
+  display: none;
+  width: 252px;
+  height: 16px;
+  color: red;
+  font-size: 14px;
+  padding: 0;
+}
+.container p {
+  font-size: 28px;
+  padding: 20px;
+}/*# sourceMappingURL=style.css.map */

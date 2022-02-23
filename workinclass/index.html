@@ -5,31 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .icon-block {
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: blue;
+        }
+
+        #dropdown {
+            position: relative;
+            top: 110px;
+        }
+        .dropdown-block {
+            display: none;
+        }
+
+        #loginContainer {
+            display: none;
+        }
+        #signUpContainer {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div id="emptyOrNot">содержиное</div>
 
-    <!-- <button class="btn">color</button> -->
-    <table id="table">
-        <tr>
-            <th>column1</th>
-            <th>column2</th>
-            <th>column3</th>
-        </tr>
+    <div class="icon-block" id="icon"></div>
+        <div class="dropdown-block" id="dropdown">
+            <button id="logIn">Login</button>
+            <div id="loginContainer">
+                <form action="#">
+                    <input type="email">
+                    <input type="password">
+                    <button id="btnCloseLogIn">Close</button>
+                </form>
+            </div>
 
-        <tr>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
+            <button id="signUp">signUp</button>
+            <div id="signUpContainer">
+                <form action="#">
+                    <input type="email">
+                    <input type="password">
+                    <button id="btnCloseSignUp">Close</button>
+                </form>
+            </div>
+        </div>
+    
 
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-        </tr>
-    </table>
+    <script>
+        const icon = document.getElementById('icon')
+        const dropdown = document.getElementById('dropdown')
+        icon.addEventListener('click', () => {
+            dropdown.classList.toggle('dropdown-block')
+        })
 
-    <script src="app.js"></script>
+        const logIn = document.getElementById('logIn');
+        const loginContainer = document.getElementById('loginContainer');
+        const btnClose = document.getElementById('btnCloseLogIn');
+
+        logIn.addEventListener('click', () => {
+            loginContainer.style.display = 'block';
+        })
+        btnClose.addEventListener('click', () => {  
+            loginContainer.style.display = 'none';
+        })
+
+        const signUp = document.getElementById('signUp');
+        const signUpContainer = document.getElementById('signUpContainer');
+        const btnCloseSignUp = document.getElementById('btnCloseSignUp');
+
+        signUp.addEventListener('click', () => {
+            signUpContainer.style.display = 'block';
+        })
+        btnCloseSignUp.addEventListener('click', () => {  
+            signUpContainer.style.display = 'none';
+        })
+
+    </script>
+    <!-- <script src="app.js"></script> -->
 </body>
 </html>

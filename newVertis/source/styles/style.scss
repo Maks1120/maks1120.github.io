@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+$darkBlue:#131E6A;
+$vertisRed: #FF1633;
+
+body {
+    max-width: 100%;
+    // ТОП БАР
+    .main-neader__top-bar {
+        max-width: 100%;
+        height: 40px;
+        background-color: $darkBlue;
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 16px;
+            height: 16px;
+            padding-right: 3px;
+        }
+        a {
+            font-family: 'Lato', sans-serif;
+            color: #D0E9F8;
+            font-size: 13px;
+            line-height: 18px;
+            &:after {
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: #D0E9F8;
+                content: "";
+                transition: width 0.3s ease-out;
+            }
+            
+            &:hover:after,
+            &:focus:after {
+                width: 100%;
+            }
+        }
+        .main-neader__top-bar__workin-hours {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+        }
+        .main-neader__top-bar__tel-number {
+            display: flex;
+            align-items: center;
+            margin-left: 600px;
+        }
+        .main-neader__top-bar__post {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+    }
+
+    .main-header__top-menu {
+        background-color: whitesmoke;
+    }
+
+    // ТОП-МЕНЮ
+    .main-header__sticky {
+        position: fixed;
+        top: 0;
+    }
+    .main-header__top-menu {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 5;
+        .main-header__top-menu__top-logo {
+            width: 220px;
+            height: 40px;
+            margin: 10px 50px 10px 30px;
+            background-image: url(/newVertis/source/image/vertis-small-logo-top-menu.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .main-header__top-menu__block {
+            .main-header__top-menu__block-list {
+                display: flex;
+                font-size: 13px;
+                span {
+                    color: $vertisRed;
+                }
+            }
+            a {
+                color: $darkBlue;
+                font-weight: bold;
+                &:after {
+                    display: block;
+                    width: 0;
+                    height: 1.5px;
+                    background-color: $darkBlue;
+                    content: "";
+                    transition: width 0.3s ease-out;
+                }
+                
+                &:hover:after,
+                &:focus:after {
+                    width: 100%;
+                }
+            }
+            ul {
+                list-style: none;
+                font-family: 'Lato', sans-serif;
+                text-transform: uppercase;
+                li {
+                    margin-right: 40px;
+                }
+            }
+            li > ul {
+                position: absolute;
+                width: 300px;
+                display: none;
+                li {
+                    background-color: whitesmoke;
+                    border-bottom: 2px solid $darkBlue;
+                    &:hover {
+                        background-color: $darkBlue;
+                        a {
+                            color: whitesmoke;
+                        }
+                    }
+                }
+            }
+            li:hover > ul {
+                display: block;
+                transition: display block 1s;
+                width: 300px;
+            }
+        }
+    }
+
+    // Slider TOP
+    .slider-container {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 850px;
+        background: linear-gradient(180deg, #DEDFE7 0%, rgba(233, 234, 239, 0) 100%), #E9EAEF;
+        .slider-container__list {
+            padding: 0;
+            li {
+                height: 850px;
+                text-align: center;
+                p {
+                    padding-top: 315px;
+                    font-family: 'Prata', sans-serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 110%;
+                    font-size: 90px;
+                    text-align: center;
+                    color: whitesmoke;
+                    opacity: 0.85;
+                }
+            }
+            .first-slide {
+                background-image: url(/newVertis/source/image/a-man-in-a-jacket.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .second-slide {
+                background-image: url(/newVertis/source/image/handshake.png);
+                background-position: center;
+                background-size: cover;
+            }
+            .slider-container__list__item {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 2s;
+                animation-name: fade;
+                animation-duration: 2s;
+              }
+            @-webkit-keyframes fade {
+                from {
+                    opacity: 0
+                }
+                to {
+                    opacity: 1
+                }
+            }
+            @keyframes fade {
+                from {
+                    opacity: 0
+                }
+                to {
+                    opacity: 1
+                }
+            }
+        }
+        .buttons {
+            padding: 0;
+            position: absolute;
+            border: none;
+            cursor: pointer;
+            z-index: 4;
+            background: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-size: 52px;
+            color: whitesmoke;
+            &:hover {
+                opacity: 1;
+                color: white;
+            }
+        }
+        .slider-container__prev-button {
+            left: 20px;
+            top: 425px;
+          }
+        .slider-container__next-button {
+            right: 20px;
+            top: 425px;
+        }
+    }
+}

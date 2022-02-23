@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slider-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;700&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <title>slider</title>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider__triangle"></div>
+        <ul class="slider-container__list">
+            <li class="slider-container__list__item">
+                <img src="/image/zero-running-track.png" alt="first-slide-zero-running-track">
+                <p class="item__slide-text red-slide-text">zerro runner</p>
+                <p class="item__slide-text black-slide-text">Бег с нулевой <br> ударной <br> нагрузкой <br> <span>на суставы</span></p>
+            </li>
+        
+            <li class="slider-container__list__item">
+                <img src="/image/running-track.png" alt="second-slide-running-track">
+                <p class="item__slide-text red-slide-text">беговая дорожка</p>
+                <p class="item__slide-text black-slide-text">для <br> подготовки к<br> <span>марафону</span></p>
+            </li>
+        </ul>
+        
+        <button class="slider-container__prev-button buttons" onclick="minusSlide()"></button>
+        <button class="slider-container__next-button buttons" onclick="plusSlide()"></button>
+    </div>
+    
+    <script src="slider.js"></script>
+</body>
+</html>

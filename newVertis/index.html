@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VertisLF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="/newVertis/source/styles/form-style.css">
+    <link rel="stylesheet" href="/newVertis/source/styles/style.css">
+
+</head>
+<body>
+    <header class="main-header">
+        <section class="main-neader__top-bar">
+            <div class="main-neader__top-bar__workin-hours">
+                <img src="/newVertis/source/image/vertis-icon-small-clock.svg" alt="">
+                <a href="#">З понедiлка по п'ятницю 09:00 - 18:00</a>
+            </div>
+            <div class="main-neader__top-bar__tel-number">
+                <img src="/newVertis/source/image/vertis-icon-small-tel.svg" alt="">
+                <a href="tel:+380508398704">+38 050 83 98 704</a>
+            </div>
+            <div class="main-neader__top-bar__post">
+                <img src="/newVertis/source/image/vertis-icon-small-email-1.svg" alt="">
+                <a href="mailto:info.avertislf@gmail.com">info.vertislf@gmail.com</a>
+            </div>
+        </section>
+
+        <section class="main-header__top-menu" id="top-menu">
+            <a href="/newVertis/index.html">
+                <div class="main-header__top-menu__top-logo"></div>
+            </a>
+            <div class="main-header__top-menu__block">
+                <ul class="main-header__top-menu__block-list">
+                    <li><a href="">ГОЛОВНА</a></li>
+                    <li><a href="">Про нас</a></li>
+                    <li><a href="">Аутсорсинг безпеки</a></li>
+                    <li>
+                        <a href="">Нашi послуги &#9660</a>
+                            <ul class="main-header__top-menu__block-list__sub-menu">
+                                <li><a href="">Захист Вашого бізнесу від кримінальних переслідувань</a></li>
+                                <li><a href="">IT право</a></li>
+                                <li><a href="">Врегулювання спорів з кредиторами</a></li>
+                                <li><a href="">Імміграційне право</a></li>
+                                <li><a href="">Супроводження господарської діяльності</a></li>
+                                <li><a href="">Авторське право</a></li>
+                                <li><a href="">Аутсорсинг безпеки</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="">ВІДГУКИ</a></li>
+                    <li><a href="">Новини</a></li>
+                    <li><a href="">КОНТАКТИ</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="slider-container">
+            <ul class="slider-container__list">
+                <li class="slider-container__list__item first-slide" alt="geujdbwf">
+                    <p class="item__slide-text">
+                        НАДIЙНИЙ 
+                        <br>ПРАВОВИЙ ЗАХИСТ 
+                        <br> ВАШОГО БIЗНЕСУ
+                    </p>
+                </li>
+            
+                <li class="slider-container__list__item second-slide">
+                    <p class="item__slide-text">Iндивiдуальний <br>пiдхiд до кожного клiєнта
+                    </p>
+                </li>
+            </ul>
+            
+            <button class="slider-container__prev-button buttons" onclick="minusSlide()">&#10094;</button>
+            <button class="slider-container__next-button buttons" onclick="plusSlide()">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+<!-- Всплывающая форма -->
+    <button class="open-button" onclick="openForm()">Открыть форму</button>
+    <div class="form-popup" id="myForm">
+        <form action="../action_page.php" class="form-container">
+            <h3>Вход</h3>
+      
+            <label for="email"><b>Почта</b></label>
+            <input type="text" placeholder="Ваша почта" name="email" required>
+      
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" placeholder="Ваш пароль" name="psw" required>
+      
+            <button type="submit" class="btn">Вход</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+        </form>
+    </div>
+    <script src="/newVertis/source/js/sliderTop.js"></script>
+    <script src="/newVertis/source/js/formScript.js"></script>
+    <script src="/newVertis/source/js/topMenuScript.js"></script>
+</body>
+</html>

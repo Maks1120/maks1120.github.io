@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div class="conversion-container">
+        <div class="conversion-container__input-one input">
+            <select name="" id="first-unit">
+                <option selected="1">Метр:</option>
+                <option>Сантиметр:</option>
+                <option>Дюйм:</option>
+                <option>Фут:</option>
+            </select>
+            <label for="meters-value">Meters</label>
+            <input class="conversion-container__input-one__value-one" id="meters-value" type="number" value="1">
+        </div>
+        <p>=</p>
+        <div class="conversion-container__input-two input">
+            <select name="" id="second-unit">
+                <option>Метр:</option>
+                <option selected="1">Сантиметр:</option>
+                <option>Дюйм:</option>
+                <option>Фут:</option>
+            </select>
+            <label for="centimeters-value">Centimeters</label>
+            <input class="conversion-container__input-two__value-two" id="" type="number" value="100">
+        </div>
+    </div>
+    <p>Centimeters: <span id="outputCentimeters"></span></p> -->
+    <select name="design_tag_type_2">
+        <option id="tag_1" value="test1">test1</option>
+        <option id="tag_2" value="test2">test2</option>
+        <option id="tag_3" value="test3">test3</option>
+        </select>
+        <script type='text/javascript'>
+        (function() {
+          var select = document.getElementsByName('design_tag_type_2')[0];
+          var options = select.getElementsByTagName('option');
+          for (var i=0; i<options.length; i++)  {
+            console.log(options[i].value);
+          }
+        })();
+        </script>
+        
+    <script src="app.js"></script>
+</body>
+</html>

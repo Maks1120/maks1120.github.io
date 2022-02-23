@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  max-width: 100%;
+}
+body .main-neader__top-bar {
+  max-width: 100%;
+  height: 40px;
+  background-color: #131E6A;
+  display: flex;
+  justify-content: space-between;
+}
+body .main-neader__top-bar img {
+  width: 16px;
+  height: 16px;
+  padding-right: 3px;
+}
+body .main-neader__top-bar a {
+  font-family: "Lato", sans-serif;
+  color: #D0E9F8;
+  font-size: 13px;
+  line-height: 18px;
+}
+body .main-neader__top-bar a:after {
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #D0E9F8;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+body .main-neader__top-bar a:hover:after, body .main-neader__top-bar a:focus:after {
+  width: 100%;
+}
+body .main-neader__top-bar .main-neader__top-bar__workin-hours {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+body .main-neader__top-bar .main-neader__top-bar__tel-number {
+  display: flex;
+  align-items: center;
+  margin-left: 600px;
+}
+body .main-neader__top-bar .main-neader__top-bar__post {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+body .main-header__top-menu {
+  background-color: whitesmoke;
+}
+body .main-header__sticky {
+  position: fixed;
+  top: 0;
+}
+body .main-header__top-menu {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+body .main-header__top-menu .main-header__top-menu__top-logo {
+  width: 220px;
+  height: 40px;
+  margin: 10px 50px 10px 30px;
+  background-image: url(/newVertis/source/image/vertis-small-logo-top-menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+body .main-header__top-menu .main-header__top-menu__block .main-header__top-menu__block-list {
+  display: flex;
+  font-size: 13px;
+}
+body .main-header__top-menu .main-header__top-menu__block .main-header__top-menu__block-list span {
+  color: #FF1633;
+}
+body .main-header__top-menu .main-header__top-menu__block a {
+  color: #131E6A;
+  font-weight: bold;
+}
+body .main-header__top-menu .main-header__top-menu__block a:after {
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: #131E6A;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+body .main-header__top-menu .main-header__top-menu__block a:hover:after, body .main-header__top-menu .main-header__top-menu__block a:focus:after {
+  width: 100%;
+}
+body .main-header__top-menu .main-header__top-menu__block ul {
+  list-style: none;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+body .main-header__top-menu .main-header__top-menu__block ul li {
+  margin-right: 40px;
+}
+body .main-header__top-menu .main-header__top-menu__block li > ul {
+  position: absolute;
+  width: 300px;
+  display: none;
+}
+body .main-header__top-menu .main-header__top-menu__block li > ul li {
+  background-color: whitesmoke;
+  border-bottom: 2px solid #131E6A;
+}
+body .main-header__top-menu .main-header__top-menu__block li > ul li:hover {
+  background-color: #131E6A;
+}
+body .main-header__top-menu .main-header__top-menu__block li > ul li:hover a {
+  color: whitesmoke;
+}
+body .main-header__top-menu .main-header__top-menu__block li:hover > ul {
+  display: block;
+  transition: display block 1s;
+  width: 300px;
+}
+body .slider-container {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 850px;
+  background: linear-gradient(180deg, #DEDFE7 0%, rgba(233, 234, 239, 0) 100%), #E9EAEF;
+}
+body .slider-container .slider-container__list {
+  padding: 0;
+}
+body .slider-container .slider-container__list li {
+  height: 850px;
+  text-align: center;
+}
+body .slider-container .slider-container__list li p {
+  padding-top: 315px;
+  font-family: "Prata", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 110%;
+  font-size: 90px;
+  text-align: center;
+  color: whitesmoke;
+  opacity: 0.85;
+}
+body .slider-container .slider-container__list .first-slide {
+  background-image: url(/newVertis/source/image/a-man-in-a-jacket.png);
+  background-position: center;
+  background-size: cover;
+}
+body .slider-container .slider-container__list .second-slide {
+  background-image: url(/newVertis/source/image/handshake.png);
+  background-position: center;
+  background-size: cover;
+}
+body .slider-container .slider-container__list .slider-container__list__item {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body .slider-container .buttons {
+  padding: 0;
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+  background: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 52px;
+  color: whitesmoke;
+}
+body .slider-container .buttons:hover {
+  opacity: 1;
+  color: white;
+}
+body .slider-container .slider-container__prev-button {
+  left: 20px;
+  top: 425px;
+}
+body .slider-container .slider-container__next-button {
+  right: 20px;
+  top: 425px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #222;
+}
+
+.container {
+    max-width: 100%;
+}
+
+button {
+    background: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: .9rem;
+}
+
+button:hover {
+    background: orangered;
+}
+
+button:active {
+    background: #000;
+    color: #fff;
+}
+
+.out-block {
+    font-size: 1rem;
+    font-family: monospace;
+}
+
+.red {
+    color: IndianRed;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-line {
+    width: 100%;
+    display: flex;
+    background: orange;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+}
